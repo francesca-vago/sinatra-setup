@@ -1,5 +1,8 @@
 require 'sinatra'
 
+# sets the view directory correctly
+set :views, Proc.new { File.join(root, 'app/views') }
+
 get '/' do
-  'Hello world!'
+  erb :index
 end
